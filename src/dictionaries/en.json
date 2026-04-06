@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "leistungen": "Services",
+    "robotic": "Robotics",
+    "kontakt": "Contact",
+    "cta": "Consultation"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy"
+  }
+}

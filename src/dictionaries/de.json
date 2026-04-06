@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "leistungen": "Leistungen",
+    "robotic": "Robotic Gastronomy",
+    "kontakt": "Kontakt",
+    "cta": "Erstgespräch"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten",
+    "privacy": "Datenschutz"
+  }
+}
