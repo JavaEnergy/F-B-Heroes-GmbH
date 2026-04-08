@@ -1,9 +1,10 @@
 {
   "navigation": {
-    "leistungen": "Leistungen",
-    "robotic": "Robotic Gastronomy",
-    "kontakt": "Kontakt",
-    "cta": "Erstgespräch"
+    "services": "Leistungen",
+    "robotic_gastronomy": "Robotic Gastronomy",
+    "network": "Netzwerk",
+    "about": "Über Tim Plasse",
+    "contact": "Kontakt"
   },
   "footer": {
     "rights": "Alle Rechte vorbehalten",
