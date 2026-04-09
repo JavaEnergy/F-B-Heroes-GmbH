@@ -45,6 +45,7 @@ const HeroContainer = styled.section`
   padding: 80px 64px 128px 64px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 128px;
 `;
 

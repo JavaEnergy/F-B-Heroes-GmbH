@@ -52,6 +52,7 @@ const FooterElement = styled.footer`
   padding: 64px 48px;
   background-color: #f4f4f2;
   display: flex;
+  justify-content: center;
   gap: 225px;
 `;
 

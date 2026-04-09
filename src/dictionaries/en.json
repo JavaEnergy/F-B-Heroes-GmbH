@@ -17,5 +17,13 @@
     "viewServices": "View Services",
     "bookCall": "Get in Touch",
     "reality": "The Reality"
+  },
+  "homeStrategy": {
+    "title": "The Strategic Approach",
+    "quote": "I turn the process around. For me, success doesn't start with design, but with profitability.",
+    "author": "Tim Plasse",
+    "description": "F&B Heroes focuses on the economic basis to ensure long-term stability in volatile markets.",
+    "stepLabel": "Step",
+    "steps": ["The Business Model", "The Concept", "The Implementation"]
   }
 }

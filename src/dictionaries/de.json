@@ -17,5 +17,13 @@
     "viewServices": "Leistungen ansehen",
     "bookCall": "Erstgespräch anfragen",
     "reality": "Die Realität"
+  },
+  "homeStrategy": {
+    "title": "Der strategische Ansatz",
+    "quote": "Ich drehe den Prozess um. Erfolg beginnt für mich nicht beim Design, sondern bei der Rentabilität.",
+    "author": "Tim Plasse",
+    "description": "F&B Heroes fokussiert sich auf die ökonomische Basis, um langfristige Stabilität in volatilen Märkten zu sichern.",
+    "stepLabel": "Schritt",
+    "steps": ["Das Geschäftsmodell", "Das Konzept", "Die Umsetzung"]
   }
 }

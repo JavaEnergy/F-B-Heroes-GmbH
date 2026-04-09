@@ -109,7 +109,7 @@ const LangSwitcher = styled.div`
   gap: 8px;
   align-items: center;
   justify-content: flex-end;
-  flex: 1; /* Takes up space on the right to help center the Nav */
+  flex: 1;
   font-size: 14px;
   font-weight: 600;
 
