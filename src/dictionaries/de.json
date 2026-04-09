@@ -7,7 +7,15 @@
     "contact": "Kontakt"
   },
   "footer": {
-    "rights": "Alle Rechte vorbehalten",
-    "privacy": "Datenschutz"
+    "important_links": "WICHTIGE LINKS",
+    "digital_presence": "DIGITALE PRÄSENZ",
+    "rights_reserved": "Alle Rechte vorbehalten.",
+    "imprint": "Impressum",
+    "privacy_policy": "Datenschutz"
+  },
+  "home": {
+    "viewServices": "Leistungen ansehen",
+    "bookCall": "Erstgespräch anfragen",
+    "reality": "Die Realität"
   }
 }

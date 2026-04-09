@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { getDictionary } from "@/lib/get-dictionary";
-import { Header } from "@/components";
+import { Footer, Header } from "@/components";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -27,6 +27,7 @@ export default async function RootLayout({
       <body className="antialiased">
         <Header dict={dict.navigation} lang={locale} />
         <main>{children}</main>
+        <Footer dict={dict} lang={locale} />
       </body>
     </html>
   );

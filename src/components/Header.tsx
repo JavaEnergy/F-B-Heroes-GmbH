@@ -74,12 +74,12 @@ const HeaderElement = styled.header`
   padding: 28px 32px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Ensures Logo and Switcher stay at ends */
+  justify-content: space-between;
 `;
 
 const LogoContainer = styled(Link)`
   display: flex;
-  flex: 1; /* Takes up space on the left to help center the Nav */
+  flex: 1;
 `;
 
 const Nav = styled.nav`
@@ -94,6 +94,8 @@ const LinkElement = styled(Link)<{ $active: boolean }>`
   font-weight: 500;
   padding: 4px;
   color: ${(props) => (props.$active ? "#0f5238" : "#222")};
+  border-bottom: ${(props) =>
+    props.$active ? "2px solid #0f5238" : "2px solid transparent"};
   text-decoration: none;
   transition: color 0.2s;
 

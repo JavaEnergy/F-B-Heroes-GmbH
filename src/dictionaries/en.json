@@ -7,7 +7,15 @@
     "contact": "Contact"
   },
   "footer": {
-    "rights": "All rights reserved",
-    "privacy": "Privacy Policy"
+    "important_links": "IMPORTANT LINKS",
+    "digital_presence": "DIGITAL PRESENCE",
+    "rights_reserved": "All rights reserved.",
+    "imprint": "Imprint",
+    "privacy_policy": "Privacy Policy"
+  },
+  "home": {
+    "viewServices": "View Services",
+    "bookCall": "Get in Touch",
+    "reality": "The Reality"
   }
 }
