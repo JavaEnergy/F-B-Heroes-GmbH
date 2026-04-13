@@ -13,3 +13,5 @@ export { default as Remove } from "./Remove";
 export { default as DoubleCheck } from "./DoubleCheck";
 export { default as Storm } from "./Storm";
 export { default as RoboIcon } from "./RoboIcon";
+export { default as Like } from "./Like";
+export { default as Dislike } from "./Dislike";
