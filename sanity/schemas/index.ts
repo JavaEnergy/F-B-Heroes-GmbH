@@ -1,6 +1,7 @@
 import home from "./home-schema";
 import services from "./services-schema";
 import robotic from "./robotic-schema";
+import network from "./network-schema";
 import { localeText } from "./objects/localeText";
 import { localeString } from "./objects/localeString";
 import { localePortableText } from "./objects/localePortableText";
@@ -11,6 +12,7 @@ const schemas = [
   home,
   services,
   robotic,
+  network,
   localeText,
   localeString,
   localePortableText,

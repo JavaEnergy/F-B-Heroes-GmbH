@@ -106,3 +106,26 @@ export async function getRoboticPage(lang: string): Promise<any> {
     { lang },
   );
 }
+
+export async function getNetworkPage(lang: string): Promise<any> {
+  return client.fetch(
+    groq`*[_type == "network-page"][0]{
+      hero {
+        "badge": badge.${lang},
+        "title": title.${lang},
+        "description": description.${lang},
+        "image": image.asset->url
+      },
+      expertsSection {
+        "title": title.${lang},
+        "description": description.${lang},
+        cards[] {
+          "image": image.asset->url,
+          "title": title.${lang},
+          "description": description.${lang}
+        }
+      }
+    }`,
+    { lang },
+  );
+}
