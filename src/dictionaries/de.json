@@ -152,6 +152,23 @@
           "Mangelnder digitaler Infrastruktur"
         ]
       }
+    },
+    "partner": {
+      "brand": "VEND Robotic",
+      "title": "Mein Implementierungspartner",
+      "description": "Während ich als F&B Hero Ihre Strategie und Ihr Geschäftsmodell entwickle, ist VEND Robotic mein Partner für Ihre technische Realisierung. Gemeinsam liefern wir Ihnen schlüsselfertige Lösungen.",
+      "features": ["Eigene Software-Steuerung", "Wartung & 24/7 Support"],
+      "link": "Zu VEND Robotic wechseln",
+      "liveDemo": {
+        "label": "LIVE DEMO",
+        "title": "VEND Cubes in Action"
+      }
+    },
+    "gastroCheck": {
+      "title": "Sind Sie bereit für die Zukunft?",
+      "description": "Nutzen Sie meinen kostenlosen Robotic Gastro Check, um in 5 Minuten herauszufinden, ob Ihr Konzept von meiner Automatisierung profitieren kann.",
+      "button": "Meinen Robotic Gastro Check starten",
+      "disclaimer": "Unverbindlich & Kostenlos • Ihre individuelle Auswertung"
     }
   }
 }

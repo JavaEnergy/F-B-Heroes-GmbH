@@ -149,6 +149,23 @@
           "Lack of digital infrastructure"
         ]
       }
+    },
+    "partner": {
+      "brand": "VEND Robotic",
+      "title": "My Implementation Partner",
+      "description": "While I develop your strategy and business model as F&B Hero, VEND Robotic is my partner for your technical implementation. Together we deliver turnkey solutions.",
+      "features": ["In-house software control", "Maintenance & 24/7 Support"],
+      "link": "Switch to VEND Robotic",
+      "liveDemo": {
+        "label": "LIVE DEMO",
+        "title": "VEND Cubes in Action"
+      }
+    },
+    "gastroCheck": {
+      "title": "Are you ready for the future?",
+      "description": "Take my free Robotic Gastro Check to find out in 5 minutes if your concept can benefit from my automation.",
+      "button": "Start my Robotic Gastro Check",
+      "disclaimer": "Non-binding & free • Your individual evaluation"
     }
   }
 }

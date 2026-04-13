@@ -15,3 +15,6 @@ export { default as Storm } from "./Storm";
 export { default as RoboIcon } from "./RoboIcon";
 export { default as Like } from "./Like";
 export { default as Dislike } from "./Dislike";
+export { default as Code } from "./Code";
+export { default as Wrench } from "./Wrench";
+export { default as FullStorm } from "./FullStorm";

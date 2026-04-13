@@ -1,11 +1,13 @@
 import { getDictionary } from "@/lib/get-dictionary";
 import { getRoboticPage } from "../../../../sanity/sanity-utils";
 import {
+  ActionSection,
   AdviseSection,
   Differentiation,
   ExpertiseSection,
   HeroSection,
   Overview,
+  Partner,
 } from "@/components/robotic";
 
 interface Props {
@@ -16,7 +18,6 @@ export default async function RoboticGastronomy({ params }: Props) {
   const { locale } = await params;
   const dict = await getDictionary(locale as "en" | "de");
   const data = await getRoboticPage(locale);
-  console.log("Robotic Gastronomy Page Data:", data.expertiseReferences);
   return (
     <>
       <HeroSection {...data.hero} dict={dict.roboticPage.hero} />
@@ -31,6 +32,11 @@ export default async function RoboticGastronomy({ params }: Props) {
         title={data.expertiseReferences.title}
         cards={data.expertiseReferences.cards}
       />
+      <Partner
+        image={data.implementationPartner.circleImage}
+        dict={dict.roboticPage.partner}
+      />
+      <ActionSection dict={dict.roboticPage.gastroCheck} />
     </>
   );
 }
