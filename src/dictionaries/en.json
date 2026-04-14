@@ -203,5 +203,35 @@
       "description": "Let's clarify in a personal initial consultation how I can make your vision a reality together with you.",
       "button": "Request initial consultation"
     }
+  },
+  "contact": {
+    "left": {
+      "title": "Ready for a Gastronomy Model of the Future?",
+      "description": "Joint assessment and development of projects for maximum profitability and sustainability."
+    },
+    "right": {
+      "title": "How can F&B Heroes support you?",
+      "fields": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "company": "Company",
+        "interest": "I am interested in...",
+        "message": "Your Message",
+        "privacy": "I agree to the processing of my data.",
+        "placeholder": "Please select..."
+      },
+      "submit": "Submit Inquiry"
+    },
+    "errors": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address"
+    },
+    "potentialCheck": {
+      "badge": "POTENZIAL-CHECK",
+      "title": "Does F&B Heroes' expertise fit your project?",
+      "description": "Use the 2-minute self-assessment tool to find out if the experience in Food, Tech & Gastronomy matches your set goals.",
+      "button": "Start Assessment"
+    }
   }
 }

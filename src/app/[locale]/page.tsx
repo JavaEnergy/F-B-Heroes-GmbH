@@ -7,6 +7,7 @@ import HeroSection, {
 import { getHomePage } from "../../../sanity/sanity-utils";
 import { getDictionary } from "@/lib/get-dictionary";
 import styled from "styled-components";
+import ContactForm from "@/components/shared/ContactForm";
 
 interface Props {
   params: Promise<{ locale: string }>;
@@ -46,6 +47,7 @@ export default async function Home({ params }: Props) {
         rightImage={data.dividerImages.rightImage}
       />
       <BottomCards cards={finalCards} dict={dict.home} />
+      <ContactForm dict={dict} />
     </>
   );
 }

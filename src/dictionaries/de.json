@@ -206,5 +206,35 @@
       "description": "Lassen Sie uns in einem persönlichen Erstgespräch klären, wie ich Ihre Vision gemeinsam mit Ihnen Realität werden lasse.",
       "button": "Erstgespräch anfragen"
     }
+  },
+  "contact": {
+    "left": {
+      "title": "Bereit für ein Gastronomie-Modell der Zukunft?",
+      "description": "Gemeinsame Prüfung und Entwicklung von Projekten für maximale Rentabilität und Zukunftsfähigkeit."
+    },
+    "right": {
+      "title": "Wie kann F&B Heroes unterstützen?",
+      "fields": {
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "email": "E-Mail-Adresse",
+        "company": "Unternehmen",
+        "interest": "Ich interessiere mich für...",
+        "message": "Ihre Nachricht",
+        "privacy": "Ich stimme der Verarbeitung meiner Daten zu.",
+        "placeholder": "Bitte wählen..."
+      },
+      "submit": "Jetzt Anfragen"
+    },
+    "errors": {
+      "required": "Dieses Feld ist ein Pflichtfeld",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+    },
+    "potentialCheck": {
+      "badge": "POTENZIAL-CHECK",
+      "title": "Passt die Expertise von F&B Heroes zum Vorhaben?",
+      "description": "Nutzen Sie das 2-Minuten Self-Assessment Tool, um herauszufinden, ob die Erfahrung im Bereich Food, Tech & Gastronomy zu den gesteckten Zielen passt.",
+      "button": "Assessment starten"
+    }
   }
 }

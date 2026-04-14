@@ -152,3 +152,13 @@ export async function getAboutPage(lang: string): Promise<any> {
     { lang },
   );
 }
+
+export async function getExtraPage(slug: string, lang: string) {
+  return client.fetch(
+    groq`*[_type == "extra-page" && slug.current == $slug][0]{
+      title,
+      "content": content.${lang}
+    }`,
+    { slug, lang },
+  );
+}
