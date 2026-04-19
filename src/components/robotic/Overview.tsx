@@ -62,11 +62,21 @@ const Card = styled.div`
   border-radius: 12px;
   gap: 16px;
   cursor: pointer;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.2, 1, 0.3, 1),
+    scale 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0);
+
   &:hover {
-    transition: all 0.3s ease;
     transform: translateY(-12px);
-    box-shadow: 0 0 10px 2px #0f5238;
-    scale: 1.1;
+    scale: 1.2;
+    box-shadow: 0 10px 30px -5px rgba(15, 82, 56, 0.3);
+  }
+  &:active {
+    transform: translateY(-4px);
+    scale: 1.02;
+    transition: all 0.1s ease;
   }
 `;
 

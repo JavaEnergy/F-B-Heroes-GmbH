@@ -44,7 +44,7 @@ const SectionTitle = styled.h2`
 const Wrapper = styled.div`
   margin-top: 64px;
   display: flex;
-  gap: 32px;
+  gap: 68px;
   align-items: center;
   justify-content: center;
 `;
@@ -64,10 +64,20 @@ const CardElement = styled.div`
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0 0 10px 2px #0f5238;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 1, 0.3, 1),
+    scale 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+
   &:hover {
-    transition: all 0.3s ease;
     transform: translateY(-12px);
-    scale: 1.1;
+    scale: 1.2;
+    box-shadow: 0 10px 30px -5px rgba(15, 82, 56, 0.3);
+    z-index: 10;
+  }
+  &:active {
+    transform: translateY(-4px);
+    scale: 1.02;
+    transition: all 0.1s ease;
   }
 `;
 
