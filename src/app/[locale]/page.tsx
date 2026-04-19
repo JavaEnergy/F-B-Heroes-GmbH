@@ -1,5 +1,6 @@
 import HeroSection, {
   BottomCards,
+  ContactForm,
   Partners,
   Robotic,
   Steps,
@@ -7,7 +8,6 @@ import HeroSection, {
 import { getHomePage } from "../../../sanity/sanity-utils";
 import { getDictionary } from "@/lib/get-dictionary";
 import styled from "styled-components";
-import ContactForm from "@/components/shared/ContactForm";
 
 interface Props {
   params: Promise<{ locale: string }>;

@@ -208,6 +208,34 @@
     }
   },
   "contact": {
+    "hero": {
+      "badge": "KONTAKT",
+      "title": "Lassen Sie uns sprechen.",
+      "description": "Wir begleitet Visionäre bei der Gestaltung der Gastronomie von morgen. Ohne Druck, auf Augenhöhe und mit klarem Fokus auf das jeweilige Vorhaben."
+    },
+    "benefits": {
+      "title": "Erstgespräch anfragen",
+      "items": [
+        {
+          "title": "30 Minuten",
+          "description": "Kostenfrei & unverbindlich",
+          "icon": "clock"
+        },
+        {
+          "title": "Persönlicher Austausch",
+          "description": "Direkt mit Tim Plasse, ohne Agentur-Layer",
+          "icon": "user"
+        },
+        {
+          "title": "Keine Verpflichtung",
+          "description": "Reine Bedarfsanalyse & Potenzialcheck",
+          "icon": "shield"
+        }
+      ],
+      "quote": "„Bringen Sie in das erste Gespräch ein Problem mit, das wir gleich schon mal besprechen können. So entsteht für Sie gleich ein Mehrwert.“",
+      "author": "Tim Plasse",
+      "position": "Gründer F&B Heroes"
+    },
     "left": {
       "title": "Bereit für ein Gastronomie-Modell der Zukunft?",
       "description": "Gemeinsame Prüfung und Entwicklung von Projekten für maximale Rentabilität und Zukunftsfähigkeit."
@@ -224,6 +252,11 @@
         "privacy": "Ich stimme der Verarbeitung meiner Daten zu.",
         "placeholder": "Bitte wählen..."
       },
+      "interestOptions": [
+        { "value": "robotics", "label": "Robotik-Gastronomie" },
+        { "value": "strategy", "label": "Strategie & Beratung" },
+        { "value": "network", "label": "Netzwerk-Partner" }
+      ],
       "submit": "Jetzt Anfragen"
     },
     "errors": {

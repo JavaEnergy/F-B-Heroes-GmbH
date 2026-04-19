@@ -75,6 +75,10 @@ const HeaderElement = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  z-index: 1000;
 `;
 
 const LogoContainer = styled(Link)`

@@ -205,6 +205,34 @@
     }
   },
   "contact": {
+    "hero": {
+      "badge": "CONTACT",
+      "title": "Let's talk.",
+      "description": "We accompany visionaries in shaping the gastronomy of tomorrow. Without pressure, at eye level and with a clear focus on the respective project."
+    },
+    "benefits": {
+      "title": "Request Initial Consultation",
+      "items": [
+        {
+          "title": "30 Minutes",
+          "description": "Free & without obligation",
+          "icon": "clock"
+        },
+        {
+          "title": "Personal Exchange",
+          "description": "Directly with Tim Plasse, no agency layer",
+          "icon": "user"
+        },
+        {
+          "title": "No Commitment",
+          "description": "Pure needs analysis & potential check",
+          "icon": "shield"
+        }
+      ],
+      "quote": "\"Bring a problem to the first conversation that we can discuss right away. This creates immediate value for you.\"",
+      "author": "Tim Plasse",
+      "position": "Founder F&B Heroes"
+    },
     "left": {
       "title": "Ready for a Gastronomy Model of the Future?",
       "description": "Joint assessment and development of projects for maximum profitability and sustainability."
@@ -221,6 +249,11 @@
         "privacy": "I agree to the processing of my data.",
         "placeholder": "Please select..."
       },
+      "interestOptions": [
+        { "value": "robotics", "label": "Robotic Gastronomy" },
+        { "value": "strategy", "label": "Strategy & Consulting" },
+        { "value": "network", "label": "Network Partner" }
+      ],
       "submit": "Submit Inquiry"
     },
     "errors": {

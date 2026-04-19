@@ -18,3 +18,6 @@ export { default as Dislike } from "./Dislike";
 export { default as Code } from "./Code";
 export { default as Wrench } from "./Wrench";
 export { default as FullStorm } from "./FullStorm";
+export { default as Clock } from "./Clock";
+export { default as User } from "./User";
+export { default as Shield } from "./Shield";
