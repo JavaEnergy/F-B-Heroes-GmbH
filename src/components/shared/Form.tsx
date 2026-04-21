@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { sendContactEmail } from "@/app/actions";
 
 interface ContactProps {
   dict: any;
@@ -27,13 +28,20 @@ export default function Form({ dict, inputBgColor, inputColor }: ContactProps) {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(createContactSchema(errorDict)),
   });
 
-  const onSubmit = (data: any) => {
-    console.log("Form Data Submitted:", data);
+  const onSubmit = async (data: any) => {
+    try {
+      await sendContactEmail(data);
+      alert("Your message has been sent successfully!");
+      reset();
+    } catch (error) {
+      alert("An error occurred while sending your message. Please try again.");
+    }
   };
   return (
     <RightColumn
