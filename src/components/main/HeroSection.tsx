@@ -94,6 +94,7 @@ const Btns = styled.div`
 
 const ContactLink = styled(Link)`
   font-size: 16px;
+  font-weight: bold;
   color: #2d6a4f;
   display: flex;
   align-items: center;

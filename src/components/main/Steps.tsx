@@ -8,7 +8,7 @@ export default function Steps(props: { dict: any }) {
         <StepTitle>{props.dict.title}</StepTitle>
         <Quote>"{props.dict.quote}"</Quote>
         <Author>- {props.dict.author}</Author>
-        <Quote>{props.dict.description}</Quote>
+        <DescriptionQuote>{props.dict.description}</DescriptionQuote>
       </Left>
       <Right>
         <StepBox>
@@ -82,8 +82,15 @@ const StepTitle = styled.h3`
 
 const Quote = styled.p`
   font-size: 16px;
-  text-transform: italic;
+  font-style: italic;
   margin-top: 24px;
+  color: var(--medium-gray);
+`;
+
+const DescriptionQuote = styled.p`
+  font-size: 16px;
+  margin-top: 24px;
+  color: var(--medium-gray);
 `;
 
 const Author = styled.p`

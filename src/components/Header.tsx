@@ -143,8 +143,8 @@ const Nav = styled.nav<{ $open: boolean }>`
     align-items: flex-start;
     gap: 16px;
     padding: 20px 24px 24px;
-    background-color: #fff;
-    border-top: 1px solid #ececec;
+    background-color: var(--warm-white);
+    border-top: 1px solid var(--border);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.05);
   }
 `;
@@ -153,14 +153,14 @@ const LinkElement = styled(Link)<{ $active: boolean }>`
   font-size: 16px;
   font-weight: 500;
   padding: 4px;
-  color: ${(props) => (props.$active ? "#0f5238" : "#222")};
+  color: ${(props) => (props.$active ? "var(--primary-green)" : "#222")};
   border-bottom: ${(props) =>
-    props.$active ? "2px solid #0f5238" : "2px solid transparent"};
+    props.$active ? "2px solid var(--primary-green)" : "2px solid transparent"};
   text-decoration: none;
   transition: color 0.2s;
 
   &:hover {
-    color: #0f5238;
+    color: var(--primary-green);
   }
 `;
 
@@ -205,7 +205,7 @@ const MobileMenuButton = styled.button`
   span {
     width: 22px;
     height: 2px;
-    background-color: #0f5238;
+    background-color: var(--primary-green);
     border-radius: 1px;
   }
 

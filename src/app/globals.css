@@ -1,6 +1,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-green: #2D6A4F;
+  --light-green: #52B788;
+  --pale-green: #D8F3DC;
+  --green-background: #F0F7F4;
+  --warm-white: #FAFAF8;
+  --dark: #1B1B1B;
+  --medium-gray: #4A4A4A;
+  --light-gray: #F8F9FA;
+  --border: #E0E0E0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,6 +55,10 @@ h4,
 h5,
 h6 {
   font-weight: 600;
+}
+
+.bjPhLu, .coJtRO {
+  font-weight: bold;
 }
 
 .google-sans-body {

@@ -17,30 +17,30 @@ export default function Footer(props: { dict: any; lang: string }) {
           <LinkItem href="/about">TAMTAM</LinkItem>
         </Group>
         <Group>
-          <GroupTitle style={{ color: "#0f5238" }}>
+          <GroupTitle style={{ color: "var(--primary-green)" }}>
             {props.dict.footer.important_links}
           </GroupTitle>
           <LinkItem href="/imprint">{props.dict.footer.imprint}</LinkItem>
           <LinkItem href="/privacy">{props.dict.footer.privacy_policy}</LinkItem>
         </Group>
         <Group>
-          <GroupTitle style={{ color: "#0f5238" }}>
+          <GroupTitle style={{ color: "var(--primary-green)" }}>
             {props.dict.footer.digital_presence}
           </GroupTitle>
           <LinkItem href="https://www.linkedin.com/company/450725/" target="_blank">
-            <FaLinkedin style={{ color: "#0f5238" }} /> LinkedIn
+            <FaLinkedin style={{ color: "var(--primary-green)" }} /> LinkedIn
           </LinkItem>
           <LinkItem
             href="https://www.instagram.com/fb_heroes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
           >
-            <FaInstagram style={{ color: "#0f5238" }} /> Instagram
+            <FaInstagram style={{ color: "var(--primary-green)" }} /> Instagram
           </LinkItem>
           <LinkItem href="https://www.facebook.com/foodandbeverageheroes" target="_blank">
-            <FaFacebook style={{ color: "#0f5238" }} /> Facebook
+            <FaFacebook style={{ color: "var(--primary-green)" }} /> Facebook
           </LinkItem>
           <LinkItem href="https://www.youtube.com/@FBHeroes" target="_blank">
-            <FaYoutube style={{ color: "#0f5238" }} /> YouTube
+            <FaYoutube style={{ color: "var(--primary-green)" }} /> YouTube
           </LinkItem>
         </Group>
       </TopGroups>
@@ -55,7 +55,7 @@ export default function Footer(props: { dict: any; lang: string }) {
 const FooterElement = styled.footer`
   width: 100%;
   padding: 64px 48px;
-  background-color: #f4f4f2;
+  background-color: var(--warm-white);
   display: flex;
   flex-direction: column;
   gap: 40px;
