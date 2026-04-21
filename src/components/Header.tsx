@@ -1,6 +1,6 @@
 "use client";
 
-import { Logo } from "@/svg";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -23,7 +23,13 @@ const Header = (props: { dict: any; lang: string }) => {
   return (
     <HeaderElement>
       <LogoContainer href={`/${props.lang}`}>
-        <Logo />
+        <Image
+          src="/FB Heroes logo.png"
+          alt="FB Heroes Logo"
+          width={129}
+          height={32}
+          priority
+        />
       </LogoContainer>
 
       <MobileMenuButton
