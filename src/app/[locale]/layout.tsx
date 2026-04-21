@@ -1,13 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { getDictionary } from "@/lib/get-dictionary";
 import { Footer, Header } from "@/components";
-
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default async function RootLayout({
   children,
@@ -20,11 +13,20 @@ export default async function RootLayout({
   const dict = await getDictionary(locale as "en" | "de");
 
   return (
-    <html
-      lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable}`}
-    >
-      <body className="antialiased">
+    <html lang={locale}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="antialiased" suppressHydrationWarning>
         <Header dict={dict.navigation} lang={locale} />
         <main>{children}</main>
         <Footer dict={dict} lang={locale} />

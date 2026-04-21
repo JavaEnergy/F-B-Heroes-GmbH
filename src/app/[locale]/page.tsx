@@ -32,7 +32,7 @@ export default async function Home({ params }: Props) {
         <RealityTitle>{dict.home.reality}</RealityTitle>
         <RealityHeading>
           {realitat.title.substring(0, greenIndex)}
-          <span style={{ color: "#0f5238" }}>
+          <span style={{ color: "var(--primary-green)", fontStyle: "italic" }}>
             {realitat.title.substring(greenIndex)}
           </span>
         </RealityHeading>
@@ -61,28 +61,39 @@ const RealitatSection = styled.section`
   align-items: center;
   justify-content: center;
   text-align: center;
+  @media (max-width: 1024px) {
+    padding: 72px 24px;
+  }
 `;
 
 const RealityTitle = styled.h3`
   font-size: 14px;
   text-transform: uppercase;
-  color: #0f5238;
+  color: var(--primary-green);
 `;
 
 const RealityHeading = styled.h2`
   font-size: 40px;
   width: 50%;
   margin-top: 16px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const Line = styled.hr`
   width: 96px;
   height: 4px;
-  background-color: #0f5238;
+  background-color: var(--primary-green);
   margin: 32px 0;
 `;
 
 const RealityDescription = styled.p`
   font-size: 20px;
   width: 50%;
+  color: var(--medium-gray);
+  @media (max-width: 1024px) {
+    width: 100%;
+    font-size: 18px;
+  }
 `;

@@ -39,6 +39,9 @@ const SectionElement = styled.section`
   width: 100%;
   padding: 96px 64px;
   background-color: #f4f4f2;
+  @media (max-width: 1024px) {
+    padding: 72px 24px;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -51,6 +54,10 @@ const Wrapper = styled.div`
   margin-top: 64px;
   width: 100%;
   justify-content: center;
+  gap: 16px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const Traditional = styled.div`
@@ -61,11 +68,17 @@ const Traditional = styled.div`
   border-top-left-radius: 24px;
   border-bottom-left-radius: 24px;
   gap: 16px;
+  @media (max-width: 1024px) {
+    border-radius: 24px;
+  }
 `;
 
 const Heroes = styled(Traditional)`
   background-color: #0f5238;
   border-radius: 0px 24px 24px 0px;
+  @media (max-width: 1024px) {
+    border-radius: 24px;
+  }
 `;
 
 const TraditionalTitle = styled.h3`

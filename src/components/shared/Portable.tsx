@@ -38,6 +38,9 @@ const Wrapper = styled.section`
   padding: 160px 24px;
   background-color: #f4f4f2;
   min-height: 100vh;
+  @media (max-width: 768px) {
+    padding: 120px 16px 72px;
+  }
 `;
 
 const Container = styled.div`
@@ -62,6 +65,9 @@ const Paragraph = styled.p`
   line-height: 1.7;
   color: #4a4a4a;
   margin-bottom: 24px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const BulletList = styled.ul`

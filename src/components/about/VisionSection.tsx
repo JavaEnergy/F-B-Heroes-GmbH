@@ -33,6 +33,9 @@ const SectionElement = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 1024px) {
+    padding: 72px 24px;
+  }
 `;
 
 const Header = styled.div`
@@ -60,6 +63,9 @@ const Description = styled.p`
   font-weight: 700;
   width: 50%;
   text-align: center;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const Grid = styled.div`
@@ -67,6 +73,9 @@ const Grid = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   width: 50%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 
   @media (max-width: 968px) {
     grid-template-columns: 1fr;

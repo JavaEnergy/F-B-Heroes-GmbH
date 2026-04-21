@@ -51,6 +51,10 @@ const RoboticSection = styled.section`
   display: flex;
   align-items: center;
   gap: 20px;
+  @media (max-width: 1024px) {
+    padding: 72px 24px;
+    flex-direction: column;
+  }
 `;
 const Left = styled.div`
   flex: 1;
@@ -59,6 +63,14 @@ const Right = styled.div`
   flex: 1;
   display: flex;
   gap: 16px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    justify-content: center;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const SectionPreTitle = styled.h3`
   font-size: 14px;

@@ -40,14 +40,26 @@ const HeroContainer = styled.section`
   justify-content: center;
   gap: 128px;
   height: fit-content;
+  @media (max-width: 1024px) {
+    padding: 32px 24px 72px;
+    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const HeroLeft = styled.div`
   width: 40%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 const HeroRight = styled.div`
   width: 50%;
   position: relative;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -65,6 +77,9 @@ const HeroDescription = styled.p`
 const HeroImage = styled.img`
   width: 70%;
   border-radius: 16px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const HeroSubtitle = styled.h3`

@@ -8,6 +8,7 @@ interface ContactProps {
   dict: any;
   inputBgColor?: string;
   inputColor?: string;
+  panelBgColor?: string;
 }
 
 const createContactSchema = (errorDict: any) =>
@@ -22,7 +23,12 @@ const createContactSchema = (errorDict: any) =>
     })
     .required();
 
-export default function Form({ dict, inputBgColor, inputColor }: ContactProps) {
+export default function Form({
+  dict,
+  inputBgColor,
+  inputColor,
+  panelBgColor,
+}: ContactProps) {
   const { right, errors: errorDict } = dict.contact;
 
   const {
@@ -46,7 +52,7 @@ export default function Form({ dict, inputBgColor, inputColor }: ContactProps) {
   return (
     <RightColumn
       onSubmit={handleSubmit(onSubmit)}
-      style={{ backgroundColor: inputColor ? "#fff" : "transparent" }}
+      $panelbg={panelBgColor ?? inputBgColor}
     >
       <FormGrid>
         <InputGroup
@@ -141,11 +147,20 @@ export default function Form({ dict, inputBgColor, inputColor }: ContactProps) {
   );
 }
 
-const RightColumn = styled.form`
+const RightColumn = styled.form<{ $panelbg?: string }>`
   flex: 1.2;
   width: 100%;
-  padding: 48px;
+  padding: 24px;
   border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: ${(props) => props.$panelbg || "transparent"};
+
+  @media (max-width: 768px) {
+    padding: 0;
+    border: none;
+    background: transparent;
+    border-radius: 0;
+  }
 `;
 
 const FormGrid = styled.div`
@@ -178,18 +193,19 @@ const InputGroup = styled.div<{
   textarea {
     background-color: ${(props) => props.inputbgcolor || "#1a1d1b"};
     border: 1px solid
-      ${(props) => (props.$hasError ? "#ff4d4d" : "transparent")};
-    border-radius: 8px;
-    padding: 16px 20px;
+      ${(props) =>
+        props.$hasError ? "#ff4d4d" : "rgba(226, 226, 224, 0.18)"};
+    border-radius: 12px;
+    padding: 14px 16px;
     color: ${(props) => props.inputcolor || "#e2e2e0"};
     font-size: 16px;
     outline: none;
     width: 100%;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
 
     &:focus {
-      background-color: ${(props) => props.inputbgcolor || "#e2e2e0"};
-      color: ${(props) => props.inputcolor || "#1a1d1b"};
+      border-color: #92f7c3;
+      box-shadow: 0 0 0 3px rgba(146, 247, 195, 0.25);
     }
   }
 
@@ -234,6 +250,11 @@ const SubmitButton = styled.button`
   cursor: pointer;
   transition: all 0.2s;
   margin-top: 48px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 32px;
+  }
 
   &:hover {
     background-color: #7ceba8;

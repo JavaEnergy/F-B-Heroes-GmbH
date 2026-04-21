@@ -42,6 +42,9 @@ const SectionElement = styled.section`
   width: 100%;
   padding: 120px 64px;
   background-color: #f4f4f2;
+  @media (max-width: 1024px) {
+    padding: 72px 24px;
+  }
 `;
 
 const Header = styled.div`
@@ -63,15 +66,24 @@ const Description = styled.p`
 `;
 
 const GridWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
-  width: fit-content;
+  width: 100%;
+
+  @media (max-width: 1280px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ExpertCard = styled.div`
   background: #ffffff;
-  max-width: 390px;
+  width: 100%;
+  max-width: none;
   padding: 40px;
   border-radius: 24px;
   display: flex;
@@ -93,6 +105,11 @@ const ExpertCard = styled.div`
     transform: translateY(-4px);
     scale: 1.02;
     transition: all 0.1s ease;
+  }
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
   }
 `;
 

@@ -55,14 +55,26 @@ const HeroContainer = styled.section`
   align-items: center;
   justify-content: center;
   gap: 128px;
+  @media (max-width: 1024px) {
+    padding: 32px 24px 72px;
+    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const HeroLeft = styled.div`
   width: 50%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 const HeroRight = styled.div`
   width: 50%;
   position: relative;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -80,6 +92,9 @@ const HeroDescription = styled.p`
 const HeroImage = styled.img`
   width: 70%;
   border-radius: 16px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const ImageTitle = styled.div`
@@ -94,6 +109,11 @@ const ImageTitle = styled.div`
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.06);
   background-color: #f4f4f2;
   align-items: center;
+  @media (max-width: 1024px) {
+    position: static;
+    margin-top: 16px;
+    max-width: 100%;
+  }
 `;
 
 const Btns = styled.div`
@@ -101,6 +121,7 @@ const Btns = styled.div`
   display: flex;
   align-items: center;
   gap: 24px;
+  flex-wrap: wrap;
 `;
 
 const ContactLink = styled(Link)`

@@ -64,6 +64,9 @@ const SectionElement = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 1024px) {
+    padding: 72px 24px;
+  }
 `;
 
 const Header = styled.div`
@@ -89,6 +92,13 @@ const GridWrapper = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
   width: fit-content;
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ExpertCard = styled.div`
@@ -115,6 +125,11 @@ const ExpertCard = styled.div`
     transform: translateY(-4px);
     scale: 1.02;
     transition: all 0.1s ease;
+  }
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
   }
 `;
 
@@ -158,4 +173,9 @@ const JoinDescription = styled(CardDescription)`
 
 const ButtonBox = styled.div`
   margin-top: auto;
+  @media (max-width: 1024px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 `;

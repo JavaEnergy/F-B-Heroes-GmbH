@@ -18,7 +18,12 @@ export default function ContactForm({ dict }: ContactProps) {
             <ConsultationDetails dict={dict} />
           </LeftColumn>
 
-          <Form dict={dict} inputColor="#000" inputBgColor="#E8E8E6" />
+          <Form
+            dict={dict}
+            inputColor="#000"
+            inputBgColor="#E8E8E6"
+            panelBgColor="transparent"
+          />
         </FormCard>
       </Container>
     </SectionElement>
@@ -32,6 +37,9 @@ const SectionElement = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1024px) {
+    padding: 72px 24px;
+  }
 `;
 
 const Container = styled.div`
@@ -51,6 +59,11 @@ const FormCard = styled.div`
     flex-direction: column;
     padding: 64px 40px;
     gap: 64px;
+  }
+  @media (max-width: 768px) {
+    padding: 32px 20px;
+    border-radius: 24px;
+    gap: 40px;
   }
 `;
 

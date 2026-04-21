@@ -36,11 +36,21 @@ const HeroContainer = styled.section`
   align-items: center;
   justify-content: center;
   gap: 128px;
+  @media (max-width: 1024px) {
+    padding: 32px 24px 72px;
+    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const HeroLeft = styled.div`
   width: 40%;
   order: 1;
+  @media (max-width: 1024px) {
+    width: 100%;
+    order: 0;
+  }
 `;
 const HeroRight = styled.div`
   width: 30%;
@@ -48,6 +58,13 @@ const HeroRight = styled.div`
   order: 0;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
+  @media (max-width: 1024px) {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -72,6 +89,9 @@ const HeroSubtitle = styled.h3`
 const HeroImage = styled.img`
   width: 70%;
   border-radius: 16px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const Stats = styled.div`
@@ -82,6 +102,17 @@ const Stats = styled.div`
   position: absolute;
   right: -64px;
   bottom: -32px;
+  z-index: 2;
+  @media (max-width: 1280px) {
+    right: 0;
+  }
+  @media (max-width: 1024px) {
+    position: static;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 `;
 const StatsTitle = styled.h3`
   font-size: 30px;

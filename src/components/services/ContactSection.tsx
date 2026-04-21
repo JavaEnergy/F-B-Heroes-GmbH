@@ -24,10 +24,14 @@ export default function ContactSection({ dict }: { dict: any }) {
 
 const SectionElement = styled.section`
   width: 100%;
-  padding: 96px 64px;
+  padding: 96px 0;
   background-color: #fff;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    padding: 72px 12px;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -46,12 +50,17 @@ const Wrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: min(100%, 1120px);
   padding: 64px;
   gap: 32px;
   background-color: #0f5238;
   align-items: center;
   border-radius: 32px;
+
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+    border-radius: 24px;
+  }
 `;
 
 const IconBox = styled.div`

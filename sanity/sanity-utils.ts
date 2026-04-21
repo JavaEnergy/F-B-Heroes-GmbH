@@ -1,8 +1,19 @@
 import { createClient, groq } from "next-sanity";
 
+const projectId =
+  process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? process.env.SANITY_PROJECT_ID;
+const dataset =
+  process.env.NEXT_PUBLIC_SANITY_DATASET ?? process.env.SANITY_DATASET;
+
+if (!projectId || !dataset) {
+  throw new Error(
+    "Missing Sanity environment variables. Set NEXT_PUBLIC_SANITY_PROJECT_ID and NEXT_PUBLIC_SANITY_DATASET (or SANITY_PROJECT_ID and SANITY_DATASET) in your .env.local file.",
+  );
+}
+
 const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
+  projectId,
+  dataset,
   apiVersion: "2024-01-01",
   useCdn: false,
 });

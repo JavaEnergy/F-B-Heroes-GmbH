@@ -34,6 +34,10 @@ const SectionElement = styled.section`
   width: 100%;
   padding: 96px 64px;
   background-color: #fff;
+
+  @media (max-width: 1024px) {
+    padding: 72px 12px;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -47,10 +51,17 @@ const Wrapper = styled.div`
   gap: 68px;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const CardElement = styled.div`
   max-width: 380px;
+  width: 100%;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -79,6 +90,17 @@ const CardElement = styled.div`
     scale: 1.02;
     transition: all 0.1s ease;
   }
+
+  @media (max-width: 768px) {
+    max-width: 420px;
+    padding: 10px;
+
+    &:hover {
+      transform: none;
+      scale: 1;
+      box-shadow: 0 0 10px 2px #0f5238;
+    }
+  }
 `;
 
 const CardPreTitle = styled.h4`
@@ -95,4 +117,8 @@ const CardTitle = styled(SectionTitle)`
 const CardImage = styled.img`
   height: 280px;
   object-fit: cover;
+
+  @media (max-width: 768px) {
+    height: 180px;
+  }
 `;

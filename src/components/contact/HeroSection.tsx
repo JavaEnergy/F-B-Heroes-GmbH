@@ -27,6 +27,9 @@ const HeroContainer = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
+  @media (max-width: 1024px) {
+    padding: 72px 24px 56px;
+  }
 `;
 
 const ContentWrapper = styled.div`
@@ -62,4 +65,7 @@ const Description = styled.p`
   line-height: 1.6;
   max-width: 700px;
   margin: 0;
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;

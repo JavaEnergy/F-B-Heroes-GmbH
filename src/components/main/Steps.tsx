@@ -8,7 +8,7 @@ export default function Steps(props: { dict: any }) {
         <StepTitle>{props.dict.title}</StepTitle>
         <Quote>"{props.dict.quote}"</Quote>
         <Author>- {props.dict.author}</Author>
-        <Quote>{props.dict.description}</Quote>
+        <DescriptionQuote>{props.dict.description}</DescriptionQuote>
       </Left>
       <Right>
         <StepBox>
@@ -49,10 +49,18 @@ const StepContainer = styled.section`
   display: flex;
   align-items: center;
   gap: 48px;
+  @media (max-width: 1024px) {
+    padding: 72px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const Left = styled.div`
   width: 35%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const Right = styled.div`
@@ -61,6 +69,10 @@ const Right = styled.div`
   flex-direction: column;
   align-items: flex-end;
   gap: 16px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    align-items: stretch;
+  }
 `;
 
 const StepTitle = styled.h3`
@@ -70,8 +82,15 @@ const StepTitle = styled.h3`
 
 const Quote = styled.p`
   font-size: 16px;
-  text-transform: italic;
+  font-style: italic;
   margin-top: 24px;
+  color: var(--medium-gray);
+`;
+
+const DescriptionQuote = styled.p`
+  font-size: 16px;
+  margin-top: 24px;
+  color: var(--medium-gray);
 `;
 
 const Author = styled.p`
@@ -87,6 +106,9 @@ const StepBox = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: #0f5238;
+  @media (max-width: 768px) {
+    padding: 24px;
+  }
 `;
 
 const StepBoxTitle = styled.h4`

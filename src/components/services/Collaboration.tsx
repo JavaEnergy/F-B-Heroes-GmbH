@@ -8,7 +8,9 @@ export default function Collaboration({ dict }: any) {
       <SectionDescription>{dict.description}</SectionDescription>
       <Cards>
         <Card>
-          <GreenHands />
+          <MainIcon>
+            <GreenHands />
+          </MainIcon>
           <CardTitle>{dict.retainer.title}</CardTitle>
           <CardDescription>{dict.retainer.description}</CardDescription>
           <Feature>
@@ -19,7 +21,9 @@ export default function Collaboration({ dict }: any) {
           </Feature>
         </Card>
         <Card>
-          <GreenRocket />
+          <MainIcon>
+            <GreenRocket />
+          </MainIcon>
           <CardTitle>{dict.projectBased.title}</CardTitle>
           <CardDescription>{dict.projectBased.description}</CardDescription>
           <Feature>
@@ -38,6 +42,9 @@ const SectionElement = styled.section`
   width: 100%;
   padding: 96px 64px;
   background-color: #f4f4f2;
+  @media (max-width: 1024px) {
+    padding: 72px 12px;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -56,12 +63,28 @@ const Cards = styled.div`
   margin-top: 64px;
   display: flex;
   gap: 32px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 16px;
+  }
 `;
 
 const Card = styled.div`
   background-color: #fff;
   border-radius: 12px;
   padding: 40px;
+  flex: 1;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 24px;
+  }
+`;
+
+const MainIcon = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 const CardTitle = styled.h3`

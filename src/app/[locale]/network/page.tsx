@@ -39,7 +39,11 @@ const PageWrapper = styled.div`
 const CTASection = styled.section`
   width: 100%;
   padding: 0 64px 96px 64px;
-  background-color: #f4f4f2;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e9e7;
+  @media (max-width: 1024px) {
+    padding: 0 24px 80px;
+  }
 `;
 
 const CTAContainer = styled.div`
@@ -52,11 +56,16 @@ const CTAContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 48px;
+  margin-top: 24px;
 
   @media (max-width: 1024px) {
     flex-direction: column;
     text-align: center;
     padding: 48px;
+    margin-top: 20px;
+  }
+  @media (max-width: 768px) {
+    padding: 32px 20px;
   }
 `;
 

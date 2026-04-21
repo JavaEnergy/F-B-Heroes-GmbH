@@ -44,8 +44,12 @@ export default function PotentialCheck({ dict, image }: PotentialCheckProps) {
 
 const SectionElement = styled.section`
   width: 100%;
-  background-color: #f4f4f2;
+  background-color: #ffffff;
   padding-bottom: 96px;
+  border-bottom: 1px solid #e6e9e7;
+  @media (max-width: 1024px) {
+    padding-bottom: 72px;
+  }
 `;
 
 const Divider = styled.div`
@@ -59,6 +63,9 @@ const Container = styled.div`
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 64px;
+  @media (max-width: 1024px) {
+    padding: 0 24px;
+  }
 `;
 
 const DarkCard = styled.div`
@@ -74,6 +81,10 @@ const DarkCard = styled.div`
     flex-direction: column;
     padding: 64px 40px;
     text-align: center;
+  }
+  @media (max-width: 768px) {
+    padding: 32px 20px;
+    border-radius: 24px;
   }
 `;
 

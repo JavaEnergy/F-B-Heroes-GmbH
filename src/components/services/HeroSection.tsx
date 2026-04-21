@@ -43,14 +43,26 @@ const HeroContainer = styled.section`
   align-items: center;
   justify-content: center;
   gap: 128px;
+  @media (max-width: 1024px) {
+    padding: 32px 24px 72px;
+    gap: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const HeroLeft = styled.div`
   width: 50%;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 const HeroRight = styled.div`
   width: 50%;
   position: relative;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -68,6 +80,9 @@ const HeroDescription = styled.p`
 const HeroImage = styled.img`
   width: 70%;
   border-radius: 16px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const HeroSubtitle = styled.h3`
@@ -92,6 +107,12 @@ const ImageTitle = styled.div`
   gap: 16px;
   background-color: #f4f4f2;
   align-items: center;
+  @media (max-width: 1024px) {
+    position: static;
+    transform: none;
+    margin-top: 16px;
+    max-width: 100%;
+  }
 `;
 
 const InfoBox = styled.div`

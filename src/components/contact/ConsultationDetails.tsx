@@ -109,9 +109,15 @@ const QuoteCard = styled.div`
   border-radius: 24px;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
+  max-width: 520px;
   gap: 24px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    padding: 24px 20px;
+  }
 `;
 
 const QuoteText = styled.p`

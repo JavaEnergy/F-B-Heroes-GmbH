@@ -45,6 +45,9 @@ const CTASection = styled.section`
   display: flex;
   justify-content: center;
   position: relative;
+  @media (max-width: 1024px) {
+    padding: 72px 24px;
+  }
 `;
 
 const CTAContainer = styled.div`
@@ -57,6 +60,11 @@ const CTAContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    border-radius: 24px;
+    padding: 48px 20px;
+  }
 `;
 
 const CTATitle = styled.h2`

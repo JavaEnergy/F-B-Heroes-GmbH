@@ -62,6 +62,10 @@ const SectionElement = styled.section`
   width: 100%;
   padding: 96px 64px;
   background-color: #f4f4f2;
+
+  @media (max-width: 1024px) {
+    padding: 72px 12px;
+  }
 `;
 
 const WhiteCard = styled.div`
@@ -76,8 +80,9 @@ const WhiteCard = styled.div`
 
   @media (max-width: 1024px) {
     flex-direction: column;
-    padding: 40px;
-    gap: 48px;
+    padding: 32px 20px;
+    gap: 32px;
+    border-radius: 24px;
   }
 `;
 

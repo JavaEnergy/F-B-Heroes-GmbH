@@ -32,9 +32,14 @@ export default function GastroCheck({ dict }: GastroCheckProps) {
 const SectionElement = styled.section`
   width: 100%;
   padding: 96px 64px;
-  background-color: #f4f4f2;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid #e6e9e7;
+
+  @media (max-width: 1024px) {
+    padding: 72px 12px 64px;
+  }
 `;
 
 const DarkCard = styled.div`
@@ -47,6 +52,13 @@ const DarkCard = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  @media (max-width: 768px) {
+    border-radius: 24px;
+    padding: 40px 20px;
+  }
 `;
 
 const Title = styled.h2`
