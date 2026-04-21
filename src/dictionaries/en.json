@@ -132,9 +132,9 @@
     },
     "suitability": {
       "title": "When does robotics make sense?",
-      "description": "I assess your situation absolutely neutrally. I don't solve every problem with a robot – but I can transform many through them.",
+      "description": "'I assess your situation absolutely neutrally. I don't solve every problem with a robot – but I can transform many through them.'",
       "recommend": {
-        "title": "I recommend it for...",
+        "title": "Recommended for...",
         "items": [
           "High standardization & volume business",
           "Acute staff shortages in your production",
@@ -142,7 +142,7 @@
         ]
       },
       "adviseAgainst": {
-        "title": "I advise against it for...",
+        "title": "Not recommended for...",
         "items": [
           "Individual high-end gastronomy",
           "Low throughput & high variance",
@@ -153,7 +153,7 @@
     "partner": {
       "brand": "VEND Robotic",
       "title": "My Implementation Partner",
-      "description": "While I develop your strategy and business model as F&B Hero, VEND Robotic is my partner for your technical implementation. Together we deliver turnkey solutions.",
+      "description": "F&B Heroes develops the strategy and business model, while VEND Robotic delivers the technical implementation, creating turnkey solutions together.",
       "features": ["In-house software control", "Maintenance & 24/7 Support"],
       "link": "Switch to VEND Robotic",
       "liveDemo": {

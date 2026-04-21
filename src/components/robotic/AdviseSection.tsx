@@ -73,6 +73,7 @@ const Description = styled.p`
   color: #404943;
   font-size: 16px;
   font-weight: 300;
+  font-style: italic;
 `;
 
 const BoxTitle = styled.h3`

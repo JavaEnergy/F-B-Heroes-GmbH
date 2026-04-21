@@ -105,7 +105,7 @@
   },
   "roboticPage": {
     "hero": {
-      "contactBtn": "Mich kontaktieren",
+      "contactBtn": "Kontak aufnehmen",
       "learnMoreBtn": "Mehr erfahren",
       "statsText": "Prozessgenauigkeit durch meine integrierte Systemsteuerung."
     },
@@ -128,16 +128,16 @@
         "bullets": [
           "Voll integrierte Workflow-Prozesse",
           "Skalierbare Systemgastronomie-Konzepte",
-          "Meine ganzheitliche Lösung für Ihre Mitarbeiterversorgung"
+          "Ganzheitliche Lösung für die Mitarbeiterversorgung"
         ],
-        "footer": "Mein Schlüssel zu Ihrer rentablen und krisensicheren Gastronomie."
+        "footer": "Der Schlüssel zu einer rentablen und krisensicheren Gastronomie."
       }
     },
     "suitability": {
       "title": "Wann macht Robotik Sinn?",
-      "description": "Ich bewerte Ihre Situation absolut neutral. Nicht jedes Problem löse ich durch einen Roboter – aber ich kann viele dadurch transformieren.",
+      "description": "'Ich bewerte Ihre Situation absolut neutral. Nicht jedes Problem löse ich durch einen Roboter – aber ich kann viele dadurch transformieren.'",
       "recommend": {
-        "title": "Ich empfehle es bei...",
+        "title": "Empfehlenswert bei...",
         "items": [
           "Hoher Standardisierung & Volumengeschäft",
           "Akutem Personalmangel in Ihrer Produktion",
@@ -145,7 +145,7 @@
         ]
       },
       "adviseAgainst": {
-        "title": "Ich rate ab bei...",
+        "title": "Nicht ratsam bei...",
         "items": [
           "Individueller High-End Gastronomie",
           "Geringem Durchlauf & hoher Varianz",
@@ -155,8 +155,8 @@
     },
     "partner": {
       "brand": "VEND Robotic",
-      "title": "Mein Implementierungspartner",
-      "description": "Während ich als F&B Hero Ihre Strategie und Ihr Geschäftsmodell entwickle, ist VEND Robotic mein Partner für Ihre technische Realisierung. Gemeinsam liefern wir Ihnen schlüsselfertige Lösungen.",
+      "title": "Der Implementierungspartner",
+      "description": "F&B Heroes entwickelt Strategie und Geschäftsmodell, während VEND Robotic die technische Realisierung verantwortet. Gemeinsam entstehen schlüsselfertige Lösungen.",
       "features": ["Eigene Software-Steuerung", "Wartung & 24/7 Support"],
       "link": "Zu VEND Robotic wechseln",
       "liveDemo": {
@@ -165,10 +165,10 @@
       }
     },
     "gastroCheck": {
-      "title": "Sind Sie bereit für die Zukunft?",
-      "description": "Nutzen Sie meinen kostenlosen Robotic Gastro Check, um in 5 Minuten herauszufinden, ob Ihr Konzept von meiner Automatisierung profitieren kann.",
-      "button": "Meinen Robotic Gastro Check starten",
-      "disclaimer": "Unverbindlich & Kostenlos • Ihre individuelle Auswertung"
+      "title": "Bereit für die Zukunft?",
+      "description": "Mit dem kostenlosen Robotic Gastro Check in 5 Minuten herausfinden, ob ein Konzept von Automatisierung profitieren kann.",
+      "button": "Robotic Gastro Check starten",
+      "disclaimer": "Unverbindlich & Kostenlos • individuelle Auswertung"
     }
   },
   "network": {

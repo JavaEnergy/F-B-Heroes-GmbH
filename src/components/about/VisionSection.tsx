@@ -27,7 +27,7 @@ export default function VisionSection({ dict }: any) {
 
 const SectionElement = styled.section`
   width: 100%;
-  padding: 120px 64px;
+  padding: 120px 24px;
   background-color: #f4f4f2;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@ const Description = styled.p`
   font-size: 36px;
   line-height: 1.6;
   font-weight: 700;
-  width: 50%;
+  width: 80%;
   text-align: center;
   @media (max-width: 1024px) {
     width: 100%;
@@ -72,7 +72,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  width: 50%;
+  width: 90%;
   @media (max-width: 1024px) {
     width: 100%;
   }
