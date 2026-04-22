@@ -1,6 +1,7 @@
 import "../globals.css";
 import { getDictionary } from "@/lib/get-dictionary";
 import { Footer, Header } from "@/components";
+import ScrollToTopOnNavigation from "@/components/ScrollToTopOnNavigation";
 
 export default async function RootLayout({
   children,
@@ -27,6 +28,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="antialiased" suppressHydrationWarning>
+        <ScrollToTopOnNavigation />
         <Header dict={dict.navigation} lang={locale} />
         <main>{children}</main>
         <Footer dict={dict} lang={locale} />

@@ -1,8 +1,10 @@
 import Link from "next/link";
 import styled from "styled-components";
-import { FaLinkedin, FaYoutube, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 export default function Footer(props: { dict: any; lang: string }) {
+  const creatorLabel = props.lang === "de" ? "Erstellt von" : "Made by";
+
   return (
     <FooterElement>
       <TopGroups>
@@ -47,6 +49,12 @@ export default function Footer(props: { dict: any; lang: string }) {
       <BottomMeta>
         <Copyright>© {new Date().getFullYear()} Tim Plasse – F&B Heroes.</Copyright>
         <Copyright>{props.dict.footer.rights_reserved}</Copyright>
+        <Copyright>
+          {creatorLabel}{" "}
+          <CreatorLink href="https://cyborg-it.de" target="_blank" rel="noreferrer">
+            cyborg-it.de
+          </CreatorLink>
+        </Copyright>
       </BottomMeta>
     </FooterElement>
   );
@@ -117,6 +125,10 @@ const Copyright = styled.div`
   font-size: 14px;
   color: "#404943";
   opacity: 0.6;
+`;
+
+const CreatorLink = styled.a`
+  text-decoration: underline;
 `;
 
 const GroupTitle = styled.h3`
