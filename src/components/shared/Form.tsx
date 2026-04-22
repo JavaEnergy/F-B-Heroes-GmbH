@@ -3,22 +3,51 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { sendContactEmail } from "@/app/actions";
+import {
+  CONTACT_INTEREST_VALUES,
+  type ContactFormSubmission,
+} from "@/lib/contact-interest";
 
 interface ContactProps {
-  dict: any;
+  dict: {
+    contact: {
+      right: {
+        fields: {
+          firstName: string;
+          lastName: string;
+          email: string;
+          company: string;
+          interest: string;
+          message: string;
+          placeholder: string;
+        };
+        interestOptions: Array<{ value: string; label: string }>;
+        submit: string;
+      };
+      errors: {
+        required: string;
+        email: string;
+      };
+    };
+  };
   inputBgColor?: string;
   inputColor?: string;
   panelBgColor?: string;
 }
 
-const createContactSchema = (errorDict: any) =>
+type ContactErrorsDict = ContactProps["dict"]["contact"]["errors"];
+
+const createContactSchema = (errorDict: ContactErrorsDict) =>
   yup
     .object({
       firstName: yup.string().required(errorDict.required),
       lastName: yup.string().required(errorDict.required),
       email: yup.string().email(errorDict.email).required(errorDict.required),
       company: yup.string().required(errorDict.required),
-      interest: yup.string().required(errorDict.required),
+      interest: yup
+        .string()
+        .oneOf([...CONTACT_INTEREST_VALUES], errorDict.required)
+        .required(errorDict.required),
       message: yup.string().required(errorDict.required),
     })
     .required();
@@ -36,16 +65,16 @@ export default function Form({
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({
+  } = useForm<ContactFormSubmission>({
     resolver: yupResolver(createContactSchema(errorDict)),
   });
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: ContactFormSubmission) => {
     try {
       await sendContactEmail(data);
       alert("Your message has been sent successfully!");
       reset();
-    } catch (error) {
+    } catch {
       alert("An error occurred while sending your message. Please try again.");
     }
   };

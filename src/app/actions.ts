@@ -1,10 +1,18 @@
 "use server";
 
 import { contactEmailTemplate } from "@/lib/email-templates";
+import {
+  CONTACT_INTEREST_VALUES,
+  type ContactFormSubmission,
+} from "@/lib/contact-interest";
 import transporter from "@/lib/mail";
 
-export async function sendContactEmail(formData: any) {
+export async function sendContactEmail(formData: ContactFormSubmission) {
   try {
+    if (!CONTACT_INTEREST_VALUES.includes(formData.interest)) {
+      return { success: false, error: "Invalid interest selection." };
+    }
+
     const htmlBody = contactEmailTemplate(formData);
 
     await transporter.sendMail({

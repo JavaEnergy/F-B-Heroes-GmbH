@@ -255,7 +255,8 @@
       "interestOptions": [
         { "value": "robotics", "label": "Robotik-Gastronomie" },
         { "value": "strategy", "label": "Strategie & Beratung" },
-        { "value": "network", "label": "Netzwerk-Partner" }
+        { "value": "network", "label": "Netzwerk-Partner" },
+        { "value": "consultation", "label": "Erstgespräch" }
       ],
       "submit": "Jetzt Anfragen"
     },

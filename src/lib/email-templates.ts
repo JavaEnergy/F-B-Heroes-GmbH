@@ -1,4 +1,9 @@
-export const contactEmailTemplate = (data: any) => {
+import {
+  getContactInterestLabel,
+  type ContactFormSubmission,
+} from "@/lib/contact-interest";
+
+export const contactEmailTemplate = (data: ContactFormSubmission) => {
   const { firstName, lastName, email, company, interest, message } = data;
 
   return `
@@ -9,7 +14,7 @@ export const contactEmailTemplate = (data: any) => {
       <p><strong>Name:</strong> ${firstName} ${lastName}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Company:</strong> ${company}</p>
-      <p><strong>Interest:</strong> ${interest}</p>
+      <p><strong>Interest:</strong> ${getContactInterestLabel(interest)}</p>
       <br />
       <p><strong>Message:</strong></p>
       <div style="background: #f4f4f2; padding: 20px; border-radius: 8px;">
