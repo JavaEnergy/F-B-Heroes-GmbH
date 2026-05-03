@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ParseBold } from "@/lib/parse-bold";
 
 interface Section {
   title: string | null;
@@ -21,7 +22,7 @@ export default function CaseStudySections({ sections }: Props) {
           const imageOnLeft = index % 2 === 0;
 
           return (
-            <SectionBlock key={index} $hasImage={hasImage} $imageOnLeft={imageOnLeft}>
+            <SectionBlock key={index} $hasImage={hasImage}>
               {hasImage && imageOnLeft && (
                 <ImageSide>
                   <img
@@ -32,7 +33,7 @@ export default function CaseStudySections({ sections }: Props) {
               )}
               <TextSide>
                 {section.title && <SectionTitle>{section.title}</SectionTitle>}
-                <Body>{section.body}</Body>
+                <Body><ParseBold text={section.body} /></Body>
               </TextSide>
               {hasImage && !imageOnLeft && (
                 <ImageSide>
@@ -58,6 +59,10 @@ const SectionElement = styled.section`
   @media (max-width: 1024px) {
     padding: 64px 24px;
   }
+
+  @media (max-width: 600px) {
+    padding: 48px 20px;
+  }
 `;
 
 const Inner = styled.div`
@@ -66,9 +71,17 @@ const Inner = styled.div`
   display: flex;
   flex-direction: column;
   gap: 96px;
+
+  @media (max-width: 1024px) {
+    gap: 56px;
+  }
+
+  @media (max-width: 600px) {
+    gap: 40px;
+  }
 `;
 
-const SectionBlock = styled.div<{ $hasImage: boolean; $imageOnLeft: boolean }>`
+const SectionBlock = styled.div<{ $hasImage: boolean }>`
   display: ${({ $hasImage }) => ($hasImage ? "grid" : "block")};
   grid-template-columns: ${({ $hasImage }) => ($hasImage ? "1fr 1fr" : "auto")};
   gap: 72px;
@@ -77,12 +90,17 @@ const SectionBlock = styled.div<{ $hasImage: boolean; $imageOnLeft: boolean }>`
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 28px;
   }
 `;
 
 const TextSide = styled.div`
   max-width: 620px;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    width: 100%;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -91,6 +109,11 @@ const SectionTitle = styled.h2`
   color: #0f5238;
   margin-bottom: 20px;
   letter-spacing: -0.02em;
+
+  @media (max-width: 600px) {
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
 `;
 
 const Body = styled.p`
@@ -98,17 +121,28 @@ const Body = styled.p`
   line-height: 1.8;
   color: #444;
   white-space: pre-line;
+
+  @media (max-width: 600px) {
+    font-size: 15px;
+    line-height: 1.75;
+  }
 `;
 
 const ImageSide = styled.div`
   border-radius: 20px;
   overflow: hidden;
   aspect-ratio: 4 / 3;
+  width: 100%;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+
+  @media (max-width: 1024px) {
+    border-radius: 14px;
+    aspect-ratio: 16 / 9;
   }
 `;

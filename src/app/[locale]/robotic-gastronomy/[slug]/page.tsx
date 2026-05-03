@@ -8,7 +8,6 @@ import {
   CaseStudyVideo,
   CaseStudyGallery,
   CaseStudyConclusion,
-  CaseStudyCTA,
 } from "@/components/case-study";
 
 interface Props {
@@ -52,11 +51,9 @@ export default async function CaseStudyPage({ params }: Props) {
       )}
       <CaseStudyVideo videoUrl={data.videoUrl ?? null} />
       <CaseStudyGallery images={data.galleryImages ?? []} />
-      <CaseStudyConclusion text={data.conclusion?.text ?? null} />
-      <CaseStudyCTA
-        ctaText={data.cta?.text ?? null}
-        ctaLink={data.cta?.link ?? null}
-        locale={locale}
+      <CaseStudyConclusion
+        title={dict.caseStudy.conclusionTitle}
+        text={data.conclusion?.text ?? null}
       />
     </>
   );

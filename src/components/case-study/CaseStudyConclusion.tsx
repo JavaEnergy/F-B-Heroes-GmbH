@@ -1,17 +1,20 @@
 import styled from "styled-components";
+import { ParseBold } from "@/lib/parse-bold";
 
 interface Props {
+  title: string;
   text: string | null;
 }
 
-export default function CaseStudyConclusion({ text }: Props) {
+export default function CaseStudyConclusion({ title, text }: Props) {
   if (!text) return null;
 
   return (
     <SectionElement>
       <Inner>
         <Accent />
-        <Text>{text}</Text>
+        <Title>{title}</Title>
+        <Text><ParseBold text={text} /></Text>
       </Inner>
     </SectionElement>
   );
@@ -25,6 +28,10 @@ const SectionElement = styled.section`
   @media (max-width: 1024px) {
     padding: 64px 24px;
   }
+
+  @media (max-width: 600px) {
+    padding: 48px 20px;
+  }
 `;
 
 const Inner = styled.div`
@@ -32,7 +39,7 @@ const Inner = styled.div`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
 `;
 
 const Accent = styled.div`
@@ -42,10 +49,34 @@ const Accent = styled.div`
   border-radius: 2px;
 `;
 
+const Title = styled.h2`
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 1024px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
+`;
+
 const Text = styled.p`
   font-size: 20px;
   line-height: 1.8;
   color: #2a2a2a;
   white-space: pre-line;
   font-style: italic;
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+    line-height: 1.75;
+  }
 `;

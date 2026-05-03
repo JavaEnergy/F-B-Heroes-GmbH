@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
+import { ParseBold } from "@/lib/parse-bold";
 
 interface Props {
   preTitle: string | null;
@@ -22,13 +23,13 @@ export default function CaseStudyHero({
 }: Props) {
   return (
     <SectionElement>
-      <Inner>
+      <Inner $hasImage={!!heroImage}>
         <Left>
           <BackLink href={`/${locale}/robotic-gastronomy`}>{backLabel}</BackLink>
           {preTitle && <Badge>{preTitle}</Badge>}
           <Title>{title}</Title>
           {subtitle && <Subtitle>{subtitle}</Subtitle>}
-          {introText && <Intro>{introText}</Intro>}
+          {introText && <Intro><ParseBold text={introText} /></Intro>}
         </Left>
         {heroImage && (
           <Right>
@@ -48,26 +49,25 @@ const SectionElement = styled.section`
   border-bottom: 1px solid #e6e9e7;
 `;
 
-const Inner = styled.div`
+const Inner = styled.div<{ $hasImage: boolean }>`
   max-width: 1280px;
   margin: 0 auto;
   padding: 80px 64px 96px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: ${({ $hasImage }) => ($hasImage ? "1fr 1fr" : "1fr")};
   gap: 80px;
   align-items: center;
 
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
     padding: 48px 24px 64px;
-    gap: 40px;
+    gap: 36px;
   }
 `;
 
 const Left = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0;
 `;
 
 const BackLink = styled(Link)`
@@ -111,7 +111,7 @@ const Title = styled.h1`
     font-size: 48px;
   }
   @media (max-width: 600px) {
-    font-size: 36px;
+    font-size: 34px;
   }
 `;
 
@@ -122,14 +122,22 @@ const Subtitle = styled.p`
   font-weight: 500;
   margin-bottom: 28px;
   line-height: 1.5;
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Intro = styled.p`
   font-size: 17px;
   line-height: 1.75;
   color: #444;
-  max-width: 520px;
   white-space: pre-line;
+
+  @media (max-width: 600px) {
+    font-size: 15px;
+  }
 `;
 
 const Right = styled.div``;

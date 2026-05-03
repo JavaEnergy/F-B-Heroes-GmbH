@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ParseBold } from "@/lib/parse-bold";
 
 interface Props {
   title: string;
@@ -16,7 +17,7 @@ export default function CaseStudyLearnings({ title, items }: Props) {
           {items.map((item, index) => (
             <LearningItem key={index}>
               <Number>{String(index + 1).padStart(2, "0")}</Number>
-              <Text>{item.text}</Text>
+              <Text><ParseBold text={item.text} /></Text>
             </LearningItem>
           ))}
         </Grid>
@@ -33,6 +34,10 @@ const SectionElement = styled.section`
   @media (max-width: 1024px) {
     padding: 64px 24px;
   }
+
+  @media (max-width: 600px) {
+    padding: 48px 20px;
+  }
 `;
 
 const Inner = styled.div`
@@ -47,6 +52,16 @@ const SectionTitle = styled.h2`
   margin-bottom: 64px;
   letter-spacing: -0.02em;
   color: #1a1a1a;
+
+  @media (max-width: 1024px) {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 22px;
+    margin-bottom: 28px;
+  }
 `;
 
 const Grid = styled.div`
@@ -56,7 +71,7 @@ const Grid = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 20px;
   }
 `;
 
@@ -68,6 +83,12 @@ const LearningItem = styled.div`
   flex-direction: column;
   gap: 16px;
   border: 1px solid #e8ebe9;
+
+  @media (max-width: 600px) {
+    padding: 24px 20px;
+    border-radius: 12px;
+    gap: 12px;
+  }
 `;
 
 const Number = styled.span`
@@ -77,6 +98,10 @@ const Number = styled.span`
   opacity: 0.25;
   line-height: 1;
   font-variant-numeric: tabular-nums;
+
+  @media (max-width: 600px) {
+    font-size: 36px;
+  }
 `;
 
 const Text = styled.p`
@@ -84,4 +109,8 @@ const Text = styled.p`
   line-height: 1.75;
   color: #333;
   white-space: pre-line;
+
+  @media (max-width: 600px) {
+    font-size: 15px;
+  }
 `;
