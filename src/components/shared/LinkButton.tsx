@@ -6,11 +6,12 @@ interface ButtonProps {
   url: string;
   color: string;
   bgcolor: string;
+  target?: string;
 }
 
 export default function LinkButton(props: ButtonProps) {
   return (
-    <Button href={props.url} color={props.color} bgcolor={props.bgcolor}>
+    <Button href={props.url} color={props.color} bgcolor={props.bgcolor} target={props.target}>
       {props.label}
     </Button>
   );

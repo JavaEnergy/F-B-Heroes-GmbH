@@ -19,7 +19,7 @@ export default function GastroCheck({ dict }: GastroCheckProps) {
         <Title>{dict.title}</Title>
         <Description>{dict.description}</Description>
 
-        <CtaButton href="/contact">
+<CtaButton href="https://tim-6oq017zf.scoreapp.com" target="_blank">
           {dict.button}
           <FullStorm />
         </CtaButton>

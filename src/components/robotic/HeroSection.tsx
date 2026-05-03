@@ -87,6 +87,7 @@ const HeroDescription = styled.p`
   font-size: 16px;
   font-weight: 400;
   margin-top: 24px;
+  font-style: italic;
 `;
 
 const HeroImage = styled.img`

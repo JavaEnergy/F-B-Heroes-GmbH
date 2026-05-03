@@ -26,9 +26,10 @@ export default function PotentialCheck({ dict, image }: PotentialCheckProps) {
             <ButtonWrapper>
               <LinkButton
                 label={dict.button}
-                url="#"
+                url="https://tim-6oq017zf.scoreapp.com"
                 bgcolor="#00734D"
                 color="#fff"
+                target="_blank"
               />
             </ButtonWrapper>
           </ContentSide>

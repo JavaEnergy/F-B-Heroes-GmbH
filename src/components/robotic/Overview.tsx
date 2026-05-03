@@ -43,6 +43,7 @@ const SectionTitle = styled.h2`
 const SectionDescription = styled.p`
   font-size: 16px;
   margin-top: 16px;
+  font-style: italic;
 `;
 
 const Cards = styled.div`
