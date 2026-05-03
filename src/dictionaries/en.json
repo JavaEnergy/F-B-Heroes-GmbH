@@ -229,6 +229,9 @@
       "button": "Request initial consultation"
     }
   },
+  "caseStudy": {
+    "backLink": "← Back to Robotic Gastronomy"
+  },
   "contact": {
     "hero": {
       "badge": "CONTACT",

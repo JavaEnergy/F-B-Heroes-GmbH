@@ -4,6 +4,7 @@ import robotic from "./robotic-schema";
 import network from "./network-schema";
 import about from "./about-schema";
 import extraSchema from "./extra-schema";
+import caseStudy from "./case-study-schema";
 import { localeText } from "./objects/localeText";
 import { localeString } from "./objects/localeString";
 import { localePortableText } from "./objects/localePortableText";
@@ -17,6 +18,7 @@ const schemas = [
   network,
   about,
   extraSchema,
+  caseStudy,
   localeText,
   localeString,
   localePortableText,

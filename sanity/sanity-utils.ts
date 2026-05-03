@@ -106,7 +106,8 @@ export async function getRoboticPage(lang: string): Promise<any> {
           "image": image.asset->url,
           "label": label.${lang},
           "title": title.${lang},
-          "description": description.${lang}
+          "description": description.${lang},
+          slug
         }
       },
       // 04. Implementation Partner Section
@@ -161,6 +162,47 @@ export async function getAboutPage(lang: string): Promise<any> {
       }
     }`,
     { lang },
+  );
+}
+
+export async function getCaseStudy(slug: string, lang: string): Promise<any> {
+  return client.fetch(
+    groq`*[_type == "case-study" && slug.current == $slug][0]{
+      hero {
+        "preTitle": preTitle.${lang},
+        "title": title.${lang},
+        "subtitle": subtitle.${lang},
+        "introText": introText.${lang},
+        "heroImage": heroImage.asset->url
+      },
+      sections[] {
+        "title": title.${lang},
+        "body": body.${lang},
+        "image": image.asset->url
+      },
+      learnings {
+        "title": title.${lang},
+        items[] {
+          "text": text.${lang}
+        }
+      },
+      conclusion {
+        "text": text.${lang}
+      },
+      galleryImages[] {
+        "url": asset->url
+      },
+      videoUrl,
+      cta {
+        "text": text.${lang},
+        link
+      },
+      seo {
+        "title": title.${lang},
+        "description": description.${lang}
+      }
+    }`,
+    { slug, lang },
   );
 }
 

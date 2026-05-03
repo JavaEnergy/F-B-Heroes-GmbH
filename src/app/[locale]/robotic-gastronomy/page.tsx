@@ -31,6 +31,7 @@ export default async function RoboticGastronomy({ params }: Props) {
       <ExpertiseSection
         title={data.expertiseReferences.title}
         cards={data.expertiseReferences.cards}
+        locale={locale}
       />
       <Partner
         image={data.implementationPartner.circleImage}

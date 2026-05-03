@@ -87,6 +87,13 @@ export default {
                   type: "localeText",
                   title: "Card Description",
                 },
+                {
+                  name: "slug",
+                  type: "string",
+                  title: "Case Study Slug",
+                  description:
+                    "Slug of the linked case study page, e.g. lady-umami or vipho-to-go. Leave empty to make the card non-clickable.",
+                },
               ],
             },
           ],

@@ -232,6 +232,9 @@
       "button": "Erstgespräch anfragen"
     }
   },
+  "caseStudy": {
+    "backLink": "← Zurück zu Robotic Gastronomy"
+  },
   "contact": {
     "hero": {
       "badge": "KONTAKT",

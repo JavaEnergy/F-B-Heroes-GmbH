@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 interface CardType {
@@ -5,11 +6,21 @@ interface CardType {
   image: string;
   label: string;
   title: string;
+  slug?: string;
 }
 
 interface ExpertiseSectionProps {
   title: string;
   cards: CardType[];
+  locale: string;
+}
+
+function toSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "");
 }
 
 export default function ExpertiseSection(props: ExpertiseSectionProps) {
@@ -17,14 +28,20 @@ export default function ExpertiseSection(props: ExpertiseSectionProps) {
     <SectionElement>
       <SectionTitle>{props.title}</SectionTitle>
       <Wrapper>
-        {props.cards.map((card, index) => (
-          <CardElement key={index}>
-            <CardImage src={card.image} alt={card.title} />
-            <CardPreTitle>{card.label}</CardPreTitle>
-            <CardTitle>{card.title}</CardTitle>
-            <p>{card.description}</p>
-          </CardElement>
-        ))}
+        {props.cards.map((card, index) => {
+          const slug = card.slug || toSlug(card.title);
+          return (
+            <CardLink
+              key={index}
+              href={`/${props.locale}/robotic-gastronomy/${slug}`}
+            >
+              <CardImage src={card.image} alt={card.title} />
+              <CardPreTitle>{card.label}</CardPreTitle>
+              <CardTitle>{card.title}</CardTitle>
+              <p>{card.description}</p>
+            </CardLink>
+          );
+        })}
       </Wrapper>
     </SectionElement>
   );
@@ -59,7 +76,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const CardElement = styled.div`
+const cardStyles = `
   max-width: 380px;
   width: 100%;
   border-radius: 12px;
@@ -67,17 +84,20 @@ const CardElement = styled.div`
   flex-direction: column;
   gap: 12px;
   padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px #0f5238;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 1, 0.3, 1),
+    scale 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+
   & img {
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
     width: 100%;
   }
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 0 10px 2px #0f5238;
-  transition:
-    transform 0.4s cubic-bezier(0.2, 1, 0.3, 1),
-    scale 0.4s cubic-bezier(0.2, 1, 0.3, 1);
 
   &:hover {
     transform: translateY(-12px);
@@ -101,6 +121,10 @@ const CardElement = styled.div`
       box-shadow: 0 0 10px 2px #0f5238;
     }
   }
+`;
+
+const CardLink = styled(Link)`
+  ${cardStyles}
 `;
 
 const CardPreTitle = styled.h4`
