@@ -7,7 +7,8 @@ import {
   ExpertiseSection,
   HeroSection,
   Overview,
-  Partner,
+  // Partner,
+  PodcastSection,
 } from "@/components/robotic";
 
 interface Props {
@@ -33,10 +34,11 @@ export default async function RoboticGastronomy({ params }: Props) {
         cards={data.expertiseReferences.cards}
         locale={locale}
       />
-      <Partner
+      {/* <Partner
         image={data.implementationPartner.circleImage}
         dict={dict.roboticPage.partner}
-      />
+      /> */}
+      <PodcastSection dict={dict.roboticPage.mediaSection} />
       <ActionSection dict={dict.roboticPage.gastroCheck} />
     </>
   );

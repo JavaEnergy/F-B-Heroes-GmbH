@@ -5,3 +5,4 @@ export { default as AdviseSection } from "./AdviseSection";
 export { default as ExpertiseSection } from "./ExpertiseSection";
 export { default as Partner } from "./Partner";
 export { default as ActionSection } from "./ActionSection";
+export { default as PodcastSection } from "./PodcastSection";
