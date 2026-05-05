@@ -16,7 +16,7 @@ export default function Footer(props: { dict: any; lang: string }) {
             F&B Heroes ({props.dict.navigation.contact})
           </LinkItem>
           <LinkItem href="/robotic-gastronomy">VEND Robotic</LinkItem>
-          <LinkItem href="/about">TAMTAM</LinkItem>
+          <LinkItem href="https://tamtam.hamburg/de" target="_blank">TAMTAM</LinkItem>
         </Group>
         <Group>
           <GroupTitle style={{ color: "var(--primary-green)" }}>

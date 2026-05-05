@@ -12,9 +12,18 @@ interface BottomCard {
 export default function BottomCards(props: { cards: BottomCard[]; dict: any }) {
   const resolveCardLink = (card: BottomCard) => {
     if (card.title.toLowerCase().includes("f&b heroes")) return "/services";
-    if (card.title.toLowerCase().includes("vend robotic")) return "/contact";
+    if (card.title.toLowerCase().includes("vend robotic")) return "/robotic-gastronomy";
+    if (card.title.toLowerCase().includes("tamtam")) return "https://tamtam.hamburg/de";
     return card.link || "#";
   };
+
+  const resolveCardTitle = (card: BottomCard) => {
+    if (card.title.toLowerCase().includes("vend robotic")) return "Robotic Gastronomy";
+    return card.title;
+  };
+
+  const isExternalCard = (card: BottomCard) =>
+    card.title.toLowerCase().includes("tamtam");
 
   return (
     <BottomCardsSection>
@@ -25,8 +34,13 @@ export default function BottomCards(props: { cards: BottomCard[]; dict: any }) {
       <Title>{props.dict.subtitle}</Title>
       <Cards>
         {props.cards.map((card, index) => (
-          <Card key={index} href={resolveCardLink(card)}>
-            <CardTitle>{card.title}</CardTitle>
+          <Card
+            key={index}
+            href={resolveCardLink(card)}
+            target={isExternalCard(card) ? "_blank" : undefined}
+            rel={isExternalCard(card) ? "noreferrer" : undefined}
+          >
+            <CardTitle>{resolveCardTitle(card)}</CardTitle>
             <CardDescription>{card.description}</CardDescription>
             <ViewText>
               {props.dict.cta} <RightArrow />
