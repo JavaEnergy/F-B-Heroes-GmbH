@@ -31,13 +31,16 @@ export default function HeroSection(props: Props) {
         </Btns>
       </HeroLeft>
       <HeroRight>
-        <HeroImage
-          src={props.image}
-          alt="Hero Image"
-          width={600}
-          height={700}
-          priority
-        />
+        <HeroImageWrapper>
+          <NextImage
+            src={props.image}
+            alt="Hero Image"
+            width={600}
+            height={700}
+            priority
+            style={{ width: "100%", height: "auto", borderRadius: "16px" }}
+          />
+        </HeroImageWrapper>
         <Stats>
           <StatsTitle>{props.stats.number}+</StatsTitle>
           <StatsLabel>{props.stats.label}</StatsLabel>
@@ -108,10 +111,8 @@ const ContactLink = styled(Link)`
   gap: 8px;
 `;
 
-const HeroImage = styled(NextImage)`
+const HeroImageWrapper = styled.div`
   width: 70%;
-  height: auto;
-  border-radius: 16px;
   @media (max-width: 1024px) {
     width: 100%;
   }

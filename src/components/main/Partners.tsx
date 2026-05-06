@@ -19,7 +19,15 @@ export default function Partners(props: PartnersProps) {
       <Cards>
         {props.partners.map((partner, index) => (
           <Card key={index}>
-            <Image src={partner.image} alt={partner.title} width={120} height={120} style={{ objectFit: "contain" }} />
+            <PartnerImageWrapper>
+              <Image
+                src={partner.image}
+                alt={partner.title}
+                width={120}
+                height={120}
+                style={{ objectFit: "contain", width: "100%", height: "100%" }}
+              />
+            </PartnerImageWrapper>
             <CardTitle>{partner.title}</CardTitle>
             <CardDescription>{partner.description}</CardDescription>
           </Card>
@@ -72,6 +80,12 @@ const Card = styled.div`
     scale: 1.02;
     transition: all 0.1s ease;
   }
+`;
+
+const PartnerImageWrapper = styled.div`
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
 `;
 
 const CardTitle = styled.h3`

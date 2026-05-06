@@ -111,6 +111,8 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  /* Preserve aspect-ratio space reservation from width/height HTML attributes */
+  aspect-ratio: attr(width) / attr(height);
 }
 
 @media (max-width: 1024px) {
