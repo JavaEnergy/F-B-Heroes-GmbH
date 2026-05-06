@@ -73,7 +73,7 @@ const Card = styled.div`
   }
 `;
 
-const CardTitle = styled.h4`
+const CardTitle = styled.h3`
   font-size: 16px;
   font-weight: 700;
   margin-top: 24px;

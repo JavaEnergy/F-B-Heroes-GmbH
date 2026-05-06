@@ -89,8 +89,8 @@ export default function Form({
           inputbgcolor={inputBgColor}
           inputcolor={inputColor}
         >
-          <label>{right.fields.firstName}</label>
-          <input {...register("firstName")} type="text" />
+          <label htmlFor="firstName">{right.fields.firstName}</label>
+          <input {...register("firstName")} id="firstName" type="text" />
           {errors.firstName && (
             <ErrorLabel>{errors.firstName.message?.toString()}</ErrorLabel>
           )}
@@ -101,8 +101,8 @@ export default function Form({
           inputbgcolor={inputBgColor}
           inputcolor={inputColor}
         >
-          <label>{right.fields.lastName}</label>
-          <input {...register("lastName")} type="text" />
+          <label htmlFor="lastName">{right.fields.lastName}</label>
+          <input {...register("lastName")} id="lastName" type="text" />
           {errors.lastName && (
             <ErrorLabel>{errors.lastName.message?.toString()}</ErrorLabel>
           )}
@@ -113,8 +113,8 @@ export default function Form({
           inputbgcolor={inputBgColor}
           inputcolor={inputColor}
         >
-          <label>{right.fields.email}</label>
-          <input {...register("email")} type="email" />
+          <label htmlFor="email">{right.fields.email}</label>
+          <input {...register("email")} id="email" type="email" />
           {errors.email && (
             <ErrorLabel>{errors.email.message?.toString()}</ErrorLabel>
           )}
@@ -125,8 +125,8 @@ export default function Form({
           inputbgcolor={inputBgColor}
           inputcolor={inputColor}
         >
-          <label>{right.fields.company}</label>
-          <input {...register("company")} type="text" />
+          <label htmlFor="company">{right.fields.company}</label>
+          <input {...register("company")} id="company" type="text" />
           {errors.company && (
             <ErrorLabel>{errors.company.message?.toString()}</ErrorLabel>
           )}
@@ -137,10 +137,10 @@ export default function Form({
           inputbgcolor={inputBgColor}
           inputcolor={inputColor}
         >
-          <label style={{ color: inputColor || "#e2e2e0" }}>
+          <label htmlFor="interest" style={{ color: inputColor || "#e2e2e0" }}>
             {right.fields.interest}
           </label>
-          <select {...register("interest")} defaultValue="">
+          <select {...register("interest")} id="interest" defaultValue="">
             <option value="" disabled>
               {right.fields.placeholder}
             </option>
@@ -162,10 +162,10 @@ export default function Form({
           inputbgcolor={inputBgColor}
           inputcolor={inputColor}
         >
-          <label style={{ color: inputColor || "#e2e2e0" }}>
+          <label htmlFor="message" style={{ color: inputColor || "#e2e2e0" }}>
             {right.fields.message}
           </label>
-          <textarea {...register("message")} rows={5} />
+          <textarea {...register("message")} id="message" rows={5} />
           {errors.message && (
             <ErrorLabel>{errors.message.message?.toString()}</ErrorLabel>
           )}

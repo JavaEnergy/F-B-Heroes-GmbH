@@ -111,10 +111,10 @@ const StepBox = styled.div`
   }
 `;
 
-const StepBoxTitle = styled.h4`
+const StepBoxTitle = styled.p`
   font-size: 14px;
   font-weight: 600;
-  color: #95d4b3;
+  color: #fff;
 `;
 
 const StepBoxDescription = styled.p`

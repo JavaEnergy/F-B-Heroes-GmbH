@@ -144,7 +144,7 @@ const Card = styled(Link)`
     }
   }
 `;
-const CardTitle = styled.h4`
+const CardTitle = styled.h3`
   font-size: 18px;
   font-weight: 700;
   color: #0f5238;

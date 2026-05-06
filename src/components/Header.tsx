@@ -185,7 +185,7 @@ const LangSwitcher = styled.div`
 
 const LangLink = styled(Link)<{ $active: boolean }>`
   text-decoration: none;
-  color: ${(props) => (props.$active ? "#0f5238" : "#999")};
+  color: ${(props) => (props.$active ? "#0f5238" : "#595959")};
   transition: color 0.2s;
 
   &:hover {

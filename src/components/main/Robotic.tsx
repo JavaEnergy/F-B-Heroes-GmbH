@@ -38,8 +38,8 @@ export default function Robotic({
         </InfoBox>
       </Left>
       <Right>
-        <SectionImage src={leftImage} />
-        <SectionImage src={rightImage} style={{ marginTop: "24px" }} />
+        <SectionImage src={leftImage} alt={dict.title} />
+        <SectionImage src={rightImage} alt={dict.title} style={{ marginTop: "24px" }} />
       </Right>
     </RoboticSection>
   );

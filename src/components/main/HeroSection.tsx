@@ -125,7 +125,7 @@ const Stats = styled.div`
     text-align: center;
   }
 `;
-const StatsTitle = styled.h3`
+const StatsTitle = styled.h2`
   font-size: 30px;
   font-weight: 700;
 `;
