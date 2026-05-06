@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import LinkButton from "../shared/LinkButton";
 import Link from "next/link";
+import NextImage from "next/image";
 import RightArrow from "@/svg";
 
 interface Props {
@@ -30,7 +31,13 @@ export default function HeroSection(props: Props) {
         </Btns>
       </HeroLeft>
       <HeroRight>
-        <HeroImage src={props.image} alt="Hero Image" />
+        <HeroImage
+          src={props.image}
+          alt="Hero Image"
+          width={600}
+          height={700}
+          priority
+        />
         <Stats>
           <StatsTitle>{props.stats.number}+</StatsTitle>
           <StatsLabel>{props.stats.label}</StatsLabel>
@@ -101,8 +108,9 @@ const ContactLink = styled(Link)`
   gap: 8px;
 `;
 
-const HeroImage = styled.img`
+const HeroImage = styled(NextImage)`
   width: 70%;
+  height: auto;
   border-radius: 16px;
   @media (max-width: 1024px) {
     width: 100%;

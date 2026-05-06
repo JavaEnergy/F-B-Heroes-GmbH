@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 interface partner {
@@ -18,7 +19,7 @@ export default function Partners(props: PartnersProps) {
       <Cards>
         {props.partners.map((partner, index) => (
           <Card key={index}>
-            <img src={partner.image} alt={partner.title} />
+            <Image src={partner.image} alt={partner.title} width={120} height={120} style={{ objectFit: "contain" }} />
             <CardTitle>{partner.title}</CardTitle>
             <CardDescription>{partner.description}</CardDescription>
           </Card>

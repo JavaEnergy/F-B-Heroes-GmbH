@@ -1,4 +1,5 @@
 import { Check } from "@/svg";
+import NextImage from "next/image";
 import styled from "styled-components";
 
 export default function Robotic({
@@ -38,8 +39,8 @@ export default function Robotic({
         </InfoBox>
       </Left>
       <Right>
-        <SectionImage src={leftImage} alt={dict.title} />
-        <SectionImage src={rightImage} alt={dict.title} style={{ marginTop: "24px" }} />
+        <SectionImage src={leftImage} alt={dict.title} width={276} height={340} />
+        <SectionImage src={rightImage} alt={dict.title} width={276} height={340} style={{ marginTop: "24px" }} />
       </Right>
     </RoboticSection>
   );
@@ -84,7 +85,7 @@ const SectionTitle = styled.h2`
   margin-top: 16px;
 `;
 
-const SectionImage = styled.img`
+const SectionImage = styled(NextImage)`
   width: 100%;
   max-width: 276px;
   height: auto;
