@@ -24,11 +24,12 @@ const Header = (props: { dict: any; lang: string }) => {
     <HeaderElement>
       <LogoContainer href={`/${props.lang}`}>
         <Image
-          src="/FB Heroes logo.png"
+          src="/FB Heroes logo.webp"
           alt="FB Heroes Logo"
           width={129}
           height={32}
           priority
+          sizes="129px"
         />
       </LogoContainer>
 

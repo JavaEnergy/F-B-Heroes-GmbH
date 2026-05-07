@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\User\\\\Desktop\\\\fbheroes-project\" -Force)",
+      "Bash(Select-Object Name)",
+      "Bash(xargs grep -l \"googleapis\\\\|gtag\\\\|analytics\\\\|Script\")",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\User\\\\Desktop\\\\fbheroes-project\" -Recurse -Force)",
+      "Bash(Select-Object -First 50)",
+      "Bash(Format-Table FullName)"
     ]
   }
 }

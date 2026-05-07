@@ -16,7 +16,7 @@ if (!projectId || !dataset) {
 
 export default defineConfig({
   name: 'default',
-  title: 'F&B Heroes GmbH',
+  title: 'Dare Development GmbH',
 
   projectId,
   dataset,

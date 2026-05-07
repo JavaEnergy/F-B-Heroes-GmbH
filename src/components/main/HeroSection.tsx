@@ -38,6 +38,7 @@ export default function HeroSection(props: Props) {
             width={600}
             height={700}
             priority
+            sizes="(max-width: 1024px) 100vw, 30vw"
             style={{ width: "100%", height: "auto", borderRadius: "16px" }}
           />
         </HeroImageWrapper>
